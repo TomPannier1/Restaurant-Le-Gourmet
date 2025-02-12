@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Gourmet - Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .menu-card {
+            transition: transform 0.3s;
+        }
+        .menu-card:hover {
+            transform: scale(1.02);
+        }
+        .popular-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #dc3545;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+        img.card-img-top,
+        .menu-card .card-img-top {
+          max-height: 200px;
+          width: 100%;
+          object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Le Gourmet</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reservation.html">Réservation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Categories -->
+    <div class="container py-5">
+        <h1 class="text-center mb-5">Notre Menu</h1>
+        
+        <!-- Category Navigation -->
+        <ul class="nav nav-pills mb-4 justify-content-center" id="menuTabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="#entrees">Entrées</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#plats">Plats</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#desserts">Desserts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#boissons">Boissons</a>
+            </li>
+        </ul>
+
+        <!-- Entrées -->
+        <section id="entrees" class="mb-5">
+            <h2 class="mb-4">Entrées</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card menu-card">
+                        <img src="assets/img/homard.jpg" class="card-img-top" alt="Entrée2">
+                        <span class="popular-badge">Spécialité</span>
+                        <div class="card-body">
+                            <h5 class="card-title">Homard à la française</h5>
+                            <p class="card-text">Un classique revisité avec finesse et modernité.</p>
+                            <p class="card-text"><small class="text-muted">60€</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card menu-card">
+                        <img src="assets/img/foie_gras.webp" class="card-img-top" alt="Entrée">
+                        <span class="popular-badge">Populaire</span>
+                        <div class="card-body">
+                            <h5 class="card-title">Foie Gras Maison</h5>
+                            <p class="card-text">Foie gras mi-cuit, chutney de figues et pain brioche toasté</p>
+                            <p class="card-text"><small class="text-muted">24€</small></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Autres entrées... -->
+            </div>
+        </section>
+
+        <!-- Plats -->
+        <section id="plats" class="mb-5">
+            <h2 class="mb-4">Plats Principaux</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card menu-card">
+                        <img src="assets/img/wellington.jpg" class="card-img-top" alt="Plat2">
+                        <span class="popular-badge">Spécialité</span>
+                        <div class="card-body">
+                            <h5 class="card-title">Filet de bœuf Wellington</h5>
+                            <p class="card-text">Une cuisson parfaite pour ce plat d'exception.</p>
+                            <p class="card-text"><small class="text-muted">45€</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card menu-card">
+                        <img src="assets/img/boeuf-rossini.jpg" class="card-img-top" alt="Plat">
+                        <div class="card-body">
+                            <h5 class="card-title">Filet de Bœuf Rossini</h5>
+                            <p class="card-text">Filet de bœuf, foie gras poêlé, sauce aux truffes</p>
+                            <p class="card-text"><small class="text-muted">38€</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Desserts -->
+        <section id="desserts" class="mb-5">
+            <h2 class="mb-4">Desserts</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card menu-card">
+                        <img src="assets/img/souffle-chocolat.jpg" class="card-img-top" alt="Dessert">
+                        <span class="popular-badge">Spécialité</span>
+                        <div class="card-body">
+                            <h5 class="card-title">Soufflé au chocolat</h5>
+                            <p class="card-text">Notre dessert signature, léger et gourmand.</p>
+                            <p class="card-text"><small class="text-muted">11€</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card menu-card">
+                        <img src="assets/img/cafe-gourmand.jpg" class="card-img-top" alt="Dessert2">
+                        <div class="card-body">
+                            <h5 class="card-title">Café gourmand</h5>
+                            <p class="card-text">Combine mini-desserts et un café espresso.</p>                      </p>
+                            <p class="card-text"><small class="text-muted">13€</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Boissons -->
+        <section id="boissons" class="mb-5">
+            <h2 class="mb-4">Boissons</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card menu-card">
+                        <img src="assets/img/cocktail.webp" class="card-img-top" alt="Boisson">
+                        <div class="card-body">
+                            <h5 class="card-title">Cocktail maison</h5>
+                            <p class="card-text">Notre cocktail maison à base de gin, avec un zeste de citron vert.</p>
+                            <p class="card-text"><small class="text-muted">8€</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card menu-card">
+                        <img src="assets/img/the-glace.jpg" class="card-img-top" alt="Boisson2">
+                        <div class="card-body">
+                            <h5 class="card-title">Thé glacé à la pêche</h5>
+                            <p class="card-text">Thé glacé maison à la pêche, rafraîchissant et léger.</p>                   
+                            <p class="card-text"><small class="text-muted">5€</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-4 text-center">
+                    <h5>Le Gourmet</h5>
+                    <p>123 rue de la Gastronomie<br>75001 Paris</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h5>Contact</h5>
+                    <p>Tél: 01 23 45 67 89<br>Email: contact@legourmet.fr</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h5>Suivez-nous</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

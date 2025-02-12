@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Gourmet - Réservation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .reservation-form {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Le Gourmet</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="reservation.html">Réservation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Réservation Section -->
+    <div class="container py-5">
+        <h1 class="text-center mb-5">Réserver une table</h1>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form class="reservation-form" id="reservationForm" onsubmit="return handleSubmit(event)">
+                    <div class="row g-3">
+                        <!-- Nom -->
+                        <div class="col-md-6">
+                            <label for="name" class="form-label">Nom complet</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        
+                        <!-- Téléphone -->
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label">Téléphone</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        
+                        <!-- Nombre de personnes -->
+                        <div class="col-md-6">
+                            <label for="guests" class="form-label">Nombre de personnes</label>
+                            <select class="form-select" id="guests" required>
+                                <option value="">Choisir...</option>
+                                <option value="1">1 personne</option>
+                                <option value="2">2 personnes</option>
+                                <option value="3">3 personnes</option>
+                                <option value="4">4 personnes</option>
+                                <option value="5">5 personnes</option>
+                                <option value="6">6 personnes</option>
+                                <option value="7">7 personnes ou plus</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Date -->
+                        <div class="col-md-6">
+                            <label for="date" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="date" required>
+                        </div>
+                        
+                        <!-- Heure -->
+                        <div class="col-md-6">
+                            <label for="time" class="form-label">Heure</label>
+                            <select class="form-select" id="time" required>
+                                <option value="">Choisir...</option>
+                                <option value="12:00">12:00</option>
+                                <option value="12:30">12:30</option>
+                                <option value="13:00">13:00</option>
+                                <option value="13:30">13:30</option>
+                                <option value="19:00">19:00</option>
+                                <option value="19:30">19:30</option>
+                                <option value="20:00">20:00</option>
+                                <option value="20:30">20:30</option>
+                                <option value="21:00">21:00</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Message spécial -->
+                        <div class="col-12">
+                            <label for="message" class="form-label">Message spécial (optionnel)</label>
+                            <textarea class="form-control" id="message" rows="3"></textarea>
+                        </div>
+                        
+                        <!-- Bouton de soumission -->
+                        <div class="col-12 text-center mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg">Réserver</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Le Gourmet</h5>
+                    <p>123 rue de la Gastronomie<br>75001 Paris</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>Tél: 01 23 45 67 89<br>Email: contact@legourmet.fr</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Suivez-nous</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Récupération des données du formulaire
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                guests: document.getElementById('guests').value,
+                date: document.getElementById('date').value,
+                time: document.getElementById('time').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Affichage d'une alerte de confirmation
+            alert('Merci pour votre réservation ! Nous vous contacterons rapidement pour la confirmer.');
+            
+            // Réinitialisation du formulaire
+            document.getElementById('reservationForm').reset();
+            
+            return false;
+        }
+    </script>
+</body>
+</html>
